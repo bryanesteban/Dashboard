@@ -30,7 +30,7 @@ export const routes: Routes = [
       {
         path: 'user/:id',
         title: 'User View',
-        loadComponent: () => import('./dashboard/pages/user/user.component').then(m => m.UserComponent),
+        loadComponent: () => import('./dashboard/pages/user/user.component').then(m => m.default),
       },
       {
         path: 'user-list',
@@ -38,9 +38,14 @@ export const routes: Routes = [
         loadComponent: () => import('./dashboard/pages/users/users.component').then(m => m.UsersComponent),
       },
       {
-        path: 'view-transition',
-        title: 'View Transition',
-        loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component').then(m => m.ViewTransitionComponent),
+        path: 'view-transition-1',
+        title: 'View Transition 1',
+        loadComponent: () => import('./dashboard/pages/view-transition/view-transition1.component').then(m => m.ViewTransitionComponent),
+      },
+      {
+        path: 'view-transition-2',
+        title: 'View Transition 2',
+        loadComponent: () => import('./dashboard/pages/view-transition/view-transition2.component').then(m => m.ViewTransitionComponent),
       },
       {
         path:'', redirectTo: 'control-flow', pathMatch: 'full',
